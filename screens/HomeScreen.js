@@ -27,10 +27,10 @@ export default class HomeScreen extends Component {
             <View>
                 <View>
                 <Text> Hello {this.state.displayName} </Text>
-                <Text><h1>HI {this.state.email} </h1></Text>
+                <Text><h1> {this.state.email} </h1></Text> 
                 </View>
             <TouchableOpacity style={styles.button} onPress={Fire.shared.signOutUser} >
-                <Text>LogOut</Text>
+                <Text><h2>LogOut</h2></Text>
             </TouchableOpacity>
 
             </View>

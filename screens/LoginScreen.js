@@ -42,7 +42,7 @@ export class LoginScreen extends React.Component {
                         onChangeText={password => this.setState({ password })}
                         value={this.state.password} />
                 </View><br /><br /><br />
-
+                
                 <TouchableOpacity style={styles.button} onPress={this.handleLogin}>
                     <Text style={{ fontWeight: 700, fontSize: 50 }} >Login</Text>
                 </TouchableOpacity><br />

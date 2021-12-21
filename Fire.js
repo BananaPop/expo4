@@ -60,6 +60,28 @@ class Fire {
     get timestamp() {
         return Date.now();
     };
+    
+    addPost = async ({ text, localUri }) => {
+        //const remoteUri = await this.uploadPhotoAsync(localUri);
+        const remoteUri = await this.uploadPhotoAsync(localUri, `photos/${this.uid}/${Date.now()}`);
+
+        return new Promise((res, rej) => {
+            this.firestore
+                .collection("posts")
+                .add({
+                    text,
+                    uid: this.uid,
+                    timestamp: this.timestamp,
+                    image: remoteUri
+                })
+                .then(ref => {
+                    res(ref);
+                })
+                .catch(error => {
+                    rej(error);
+                });
+        });
+    };
 
 
 

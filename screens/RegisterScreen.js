@@ -71,7 +71,7 @@ export default class RegisterScreen extends Component {
                         size={80}
                         color="#FCC"
                     />
-                </TouchableOpacity><br/><br/><br/>
+                </TouchableOpacity>             <br/><br/><br/>
 
                 <View style={{ alignItems: "center", justifyContent: "center" }}>
                     <Text >Name</Text>
@@ -79,7 +79,7 @@ export default class RegisterScreen extends Component {
                         style={styles.input}
                         onChangeText={name => this.setState({ user:{...this.state.user,name} })}
                         value={this.state.name} />
-                </View><br />
+                </View>                         <br/>
 
                 <View style={{ alignItems: "center", justifyContent: "center" }}>
                     <Text >Email</Text>
@@ -87,18 +87,18 @@ export default class RegisterScreen extends Component {
                         style={styles.input}
                         onChangeText={email => this.setState({ user:{...this.state.user,email} })}
                         value={this.state.email} />
-                </View><br />
+                </View>                         <br/>
 
                 <View style={{ alignItems: "center", justifyContent: "center" }}>
                     <Text>PassWord</Text>
                     <TextInput style={styles.input}
                         onChangeText={password => this.setState({ user:{...this.state.user,password} })}
                         value={this.state.password} />
-                </View><br /><br /><br />
+                </View>                         <br /><br /><br />
 
                 <TouchableOpacity style={styles.button} onPress={this.handleSignUp}>
                     <Text style={{ fontWeight: 700, fontSize: 50 }} >Signup</Text>
-                </TouchableOpacity><br />
+                </TouchableOpacity>             <br />
 
                 <TouchableOpacity onPress={() => this.props.navigation.navigate("Login")}
                     style={{ textAlign: "center" }}>
